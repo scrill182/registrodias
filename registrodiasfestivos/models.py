@@ -1,17 +1,24 @@
 
+
 from django.db import models
 from django.utils import timezone
+from django.utils.encoding import python_2_unicode_compatible
 
 # Create your models here.
-
-class registro (models.Model):
-
+@python_2_unicode_compatible
+class Registro(models.Model):
 
     no_cobro=models.IntegerField( null=False)
     nombre= models.CharField(max_length=200)
     horario = models.CharField(max_length=200)
     fecha_creacion= models.DateTimeField( default=timezone.now())
     diasFestivos = models.DateField(null=False)
+
+    objects = models.Manager()
+
+
+
+
 
 
 

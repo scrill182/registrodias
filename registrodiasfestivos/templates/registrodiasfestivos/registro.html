@@ -8,13 +8,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Django is very cool</title>
+    <title>Cool</title>
   </head>
   <body>
+  {{registro.nombre}}
+
+
+
         <div class="row  col-12 align-items-left justify-content-left p-5">
-            <div class="" ></div>
+            <div class="display-1 text-danger" > {%for reg in registro%}  {{  registro.nombre  }} {%endfor%}</div>
             <h1 class="display-1 text-primary ">Hola a todos!</h1>
+
         </div>
+
+         {
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
