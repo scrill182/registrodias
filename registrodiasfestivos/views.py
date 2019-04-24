@@ -6,9 +6,8 @@ from django.utils import timezone
 
 def regdaysview(request):
 
-    registro = Registro.objects.filter(fecha_creacion=timezone.now())
-    
-    r.exists()
-    return render(request, 'registrodiasfestivos/registro.html', {'registro':registro})
+    registro = Registro.objects.filter(nombre='Carlos')
+
+    return render(request, 'registrodiasfestivos/registro.html', {'registro': registro})
 
 

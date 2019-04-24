@@ -1,4 +1,8 @@
-<!doctype html>
+
+{% load static %}
+
+<html>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -6,22 +10,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 
     <title>Cool</title>
   </head>
   <body>
-  {{registro.nombre}}
 
-
-
-        <div class="row  col-12 align-items-left justify-content-left p-5">
-            <div class="display-1 text-danger" > {%for reg in registro%}  {{  registro.nombre  }} {%endfor%}</div>
-            <h1 class="display-1 text-primary ">Hola a todos!</h1>
-
+        <div class="row  col-6 col-lg-12 p-5 ">
+            <div class="display-4 text-danger" ></div>
+            <h1 class="display-1 text-primary p-5">Hola a todos!</h1>
         </div>
 
-         {
+          <ul class="list-group col-3 p-5 ml-5">
+            {%for reg in registro%}
+
+           <li class="list-group-item">   {{  registro }}  </li>
+            {%endfor%}
+         </ul>
+
+<h1>HOLA DESDE CSS</h1>
+
+
+ {%for reg in registro%} {{ registro }} {%endfor%}
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
