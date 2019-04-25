@@ -17,11 +17,6 @@ class Registro(models.Model):
     objects = models.Manager()
 
 
-
-
-
-
-
     def creacion(self):
         self.fecha_creacion = timezone.now()
         self.save()
